@@ -11,10 +11,18 @@ module.exports = {
         img.onload = installed;
         img.src = 'chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/play-on.png'
     },
+    /**
+     * Get Direct Player extension URL
+     * @returns {string}
+     */
     getDirectPlayer: () => {
         console.log('getDirectPlayer');
         return 'chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/pages/player.html';
     },
+    /**
+     * Get IPTV Player extension URL
+     * @returns {string}
+     */
     getIPTVPlayer: () => {
         console.log('getIPTVPlayer');
         return 'chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/iptv/player.html';

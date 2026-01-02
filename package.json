@@ -3,6 +3,16 @@
     "version": "0.0.1",
     "description": "A helper library for VideoPlayer Browser Extension",
     "main": "index.js",
+    "module": "index.js",
+    "unpkg": "index.js",
+    "browser": "index.js",
+    "exports": {
+        ".": {
+            "import": "./index.js",
+            "require": "./index.js",
+            "default": "./index.js"
+        }
+    },
     "keywords": ["video", "player", "extension", "chrome", "firefox", "iptv", "m3u", "mpd", "m3u8"],
     "author": "Sharkiller <support@sharkiller.dev>",
     "license": "MIT",
