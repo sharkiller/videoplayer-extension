@@ -6,27 +6,21 @@ https://sharkiller.dev/videoplayer/
 
 https://github.com/sharkiller/Reproductor-MPD-M3U8
 
-## Installation
+### Required
 
-```bash
-npm install videoplayer-extension
-```
+⚠️ This validate VideoPlayer Extension installation version > `26.1.5.8388`
 
 ## Direct Usage
 ```html
-<script type="module">
-    import VideoPlayer from 'https://cdn.jsdelivr.net/npm/videoplayer-extension/+esm';
-    VideoPlayer.isInstalled(
-            // Installed
-            () => {
-                // Your code when detected extension is installed
-                alert('installed');
-            },
-            // Uninstalled
-            () => {
-                // Your code when detected extension is uninstalled
-                alert('uninstalled');
-            }
-    );
+<script src="https://unpkg.com/videoplayer-extension@latest/index.min.js"></script>
+
+<script>
+    (async () => {
+        console.log('getInstallUrl()? ', VideoPlayer.getInstallUrl());
+        const vp = await VideoPlayer.init();
+        console.log('isInstalled()? ', vp.isInstalled());
+        console.log('getDirectPlayer()? ', vp.getDirectPlayer());
+        console.log('getIPTVPlayer()? ', vp.getIPTVPlayer());
+    })();
 </script>
 ```
