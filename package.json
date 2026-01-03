@@ -1,6 +1,6 @@
 {
     "name": "videoplayer-extension",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "description": "A helper library for VideoPlayer Browser Extension",
     "main": "index.js",
     "module": "index.js",
