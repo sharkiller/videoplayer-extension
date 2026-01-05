@@ -49,6 +49,13 @@ class VideoPlayer {
                 const result = regex.exec(response.url);
                 this.#extensionUrl = result[1];
                 this.#isInstalled = true;
+            }else{
+                // Fallback old Chrome versions
+                const response = await fetch('chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/play-on.png', {method: 'HEAD'});
+                if (response.ok && response.status === 200 ) {
+                    this.#extensionUrl = 'chrome-extension://opmeopcambhfimffbomjgemehjkbbmji/';
+                    this.#isInstalled = true;
+                }
             }
         } catch (error) {}
     }
